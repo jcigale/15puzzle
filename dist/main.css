@@ -73,6 +73,13 @@ button:hover {
 }
 
 #congrats {
-    font-family: 'Roboto',
-    sans-serif;
+    font-family: 'Roboto';
+    position: relative;
+    left: 35%;  
+    right: 35%;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    width: 30%;
+    text-align: center;
 }

@@ -2,11 +2,11 @@
 	
 	var puzzle = document.getElementById('puzzle');
     var congrats = document.getElementById('congrats')
-	var state = true;
+	var set = true;
 	restart();
 	
 	puzzle.addEventListener('click', function(e){
-		if(state == true){
+		if(set == true){
 			puzzle.className = 'animate';
             moveCells(e.target)
 		}
@@ -16,7 +16,7 @@
 
 
 	function restart(){
-		if(state == false){
+		if(set == false){
 			return;
 		}
 		
@@ -180,12 +180,12 @@
 
 	function scramble(){
 	
-		if(state == false){
+		if(set == false){
 			return;
 		}
 		
 		puzzle.removeAttribute('class');
-		state = false;
+		set = false;
 		
 		var previousCell;
 		var i = 1;
@@ -199,14 +199,14 @@
 						}
 					}
 				}
-                
+
 				previousCell = adjacent[rand(0, adjacent.length-1)];
                 
 				moveCells(previousCell);
 				i++;
 			} else {
 				clearInterval(interval);
-				state = true;
+				set = true;
 			}
 		}, 5);
 
