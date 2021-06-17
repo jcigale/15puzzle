@@ -1,0 +1,78 @@
+
+button {
+    position: relative;
+    left: 45%; 
+    right: 45%;
+    width: 10%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    background: red;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Roboto',
+    sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+button:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+#puzzle {
+    position: relative;
+    width: 325px;
+    height: 325px;
+    margin: 0 auto;
+    margin-top: 80px;
+    border: 8px solid gray;
+    border-radius: 4px;
+    
+}
+
+#puzzle span {
+    position: absolute;
+    display: block;
+    width: 76px;
+    height: 76px;
+    border: 2px solid silver;
+    border-radius: 8px;
+}
+
+#puzzle span.number {
+    cursor: pointer;
+    font: bold 36px/80px 'Roboto';
+    text-align: center;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#puzzle span.empty {
+    background: transparent;
+    border: none;
+}
+
+#puzzle span.number.even {
+    background: red;
+    color: white;
+}
+
+#puzzle span.number.odd {
+    background: white;
+    color: silver;
+}
+
+#puzzle.animate span {
+    -webkit-transition: 0.15s left, 0.15s top;
+    transition: 0.15s left, 0.15s top;
+}
+
+#congrats {
+    font-family: 'Roboto',
+    sans-serif;
+}
